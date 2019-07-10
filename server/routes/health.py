@@ -15,3 +15,8 @@ def CheckAnswerToLifeTheUniverseAndEverything(number):
         'check': 'The statement is ' + str(number == '42') + '!'
     }
     return jsonify(content)
+
+@app.route('/answer')
+def answer():
+    answer = {'The Answer to Life the Universe and Everything': 42}
+    return jsonify(answer)
